@@ -8,9 +8,10 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('pokemon_predictions', function (Blueprint $table) {
-            $table->id(); // id
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->string('label'); // nama pokemon hasil prediksi
+            $table->id();
+            $table->string('image');
+            $table->string('label');
+            $table->double('confidence');
             $table->timestamps();
         });
     }

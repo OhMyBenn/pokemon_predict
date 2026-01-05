@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class PokemonPrediction extends Model
 {
-    protected $fillable = ['user_id', 'label'];
+    protected $fillable = ['image', 'label', 'confidence'];
 }
 
